@@ -20,4 +20,8 @@ class DiceCup:
         '''
         Look at the dice under the cup. Returns the array of dice faces.
         '''
-        return self.dice
+        return [self.dice[0].get_face_up(),
+                self.dice[1].get_face_up(),
+                self.dice[2].get_face_up(),
+                self.dice[3].get_face_up(),
+                self.dice[4].get_face_up()]
