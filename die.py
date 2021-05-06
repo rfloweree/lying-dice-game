@@ -23,9 +23,9 @@ class Die:
         '''
         return self.face_up
 
-    def roll(self):
+    def roll(self, new_face):
         '''
         Rerolls the die. Sets a new random value for the die side facing up. 
         '''
-        self.face_up = choice(faces)
-        logger.debug('Roll: ' + str(self.face_up))
+        self.face_up = new_face
+        logger.debug('Roll: ' + str(new_face))
