@@ -1,4 +1,5 @@
 from die import Die
+from dice_roll import roll_Die
 import logging
 
 logger = logging.getLogger(__name__)
@@ -13,9 +14,11 @@ class DiceCup:
     def __init__(self):
         self.dice = [Die(), Die(), Die(), Die(), Die()]
         logger.debug(self.dice)
-        for die in self.dice:
-            die.roll()
     
+    def roll_dice(self):
+        for die in self.dice:
+            die.roll(roll_Die())
+
     def peek(self):
         '''
         Look at the dice under the cup. Returns the array of dice faces.
