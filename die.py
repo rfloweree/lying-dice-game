@@ -10,6 +10,9 @@ faces = [1, 2, 3, 4, 5, 6]
 
 
 class Die:
+    '''
+    Object that represents a six-sided die used in the game.
+    '''
     def __init__(self):
         self.face_up = None
         logger.debug('Init: ' + str(self.face_up))
