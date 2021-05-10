@@ -16,6 +16,10 @@ class DiceCup:
         logger.debug(self.dice)
     
     def roll_dice(self):
+        '''
+        This will roll all the dice in the cup and reset the values facing up.
+        This is only done at the start of the game.
+        '''
         for die in self.dice:
             die.roll(roll_Die())
 
