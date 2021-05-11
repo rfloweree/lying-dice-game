@@ -1,5 +1,4 @@
-from die import Die
-from unittest import mock
+from diceCup import Die
 from unittest import TestCase
 
 class TestDie(TestCase):
