@@ -9,3 +9,6 @@ faces =[1, 2, 3, 4, 5, 6]
 
 def roll_Die():
     return choice(faces)
+
+def roll_dice():
+    return (choice(faces), choice(faces))
