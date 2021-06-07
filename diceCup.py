@@ -1,5 +1,6 @@
 #from die import Die
 from dice_roll import roll_Die
+from dice_roll import roll_dice_poly
 import logging
 
 logger = logging.getLogger(__name__)
@@ -12,7 +13,7 @@ class DiceCup:
     from the players and allow the owner to peek.
     '''
     def __init__(self):
-        self.dice = [Die(), Die(), Die(), Die(), Die()]
+        self.dice = None
         logger.debug(self.dice)
     
     def roll_dice(self):
@@ -20,18 +21,13 @@ class DiceCup:
         This will roll all the dice in the cup and reset the values facing up.
         This is only done at the start of the game.
         '''
-        for die in self.dice:
-            die.roll(roll_Die())
+        self.dice = roll_dice_poly(6, 5)
 
     def peek(self):
         '''
         Look at the dice under the cup. Returns the array of dice faces.
         '''
-        return [self.dice[0].get_face_up(),
-                self.dice[1].get_face_up(),
-                self.dice[2].get_face_up(),
-                self.dice[3].get_face_up(),
-                self.dice[4].get_face_up()]
+        return self.dice
 
 class Die:
     '''
