@@ -12,9 +12,3 @@ class Player():
     def get_name(self):
         return self.player_name
     
-    def get_bet(self):
-        return self.player_bet
-
-    def set_bet(self, new_bet):
-        self.player_bet = new_bet
-    
