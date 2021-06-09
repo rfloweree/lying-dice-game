@@ -1,5 +1,3 @@
-#from die import Die
-from dice_roll import roll_Die
 from dice_roll import roll_dice_poly
 import logging
 
